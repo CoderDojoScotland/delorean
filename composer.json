@@ -1,0 +1,22 @@
+{
+	"name": "coderdojo/delorean",
+	"description": "PHP Console app that downloads screenshots from the Internet Archive Wayback Machine",
+	"license": "MIT",
+	"authors": [
+	    {
+	        "name": "David Rushton",
+	        "email": "david@papertank.co.uk"
+	    }
+	],
+	"require": {
+		"symfony/console": "~2.0",
+		"guzzlehttp/guzzle": "~5.0",
+		"symfony/process": "^2.7",
+		"nesbot/carbon": "^1.20"
+	},
+	"autoload": {
+		"psr-4": {
+		  "Coderdojo\\Delorean\\": "src"
+		}
+	}
+}
