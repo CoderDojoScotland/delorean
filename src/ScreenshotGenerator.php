@@ -2,18 +2,17 @@
 
 namespace Coderdojo\Delorean;
 
-use Carbon\Carbon;
-use SplFileInfo;
 use Symfony\Component\Process\Process;
+use RuntimeException;
 
 class ScreenshotGenerator {
 
     /**
-     * Get an SplFileInfo instance for the url with the given data.
+     * Get an file path for the url after saving screenshot
      *
      * @param  string $url
      * @param  string|null $path
-     * @return \SplFileInfo
+     * @return string
      */
     public function save($url, $path = null)
     {
@@ -23,9 +22,9 @@ class ScreenshotGenerator {
     }
 
     /**
-     * Write the raw PNG bytes for the map via PhantomJS.
+     * Write the raw PNG bytes for the screenshot via PhantomJS.
      *
-     * @param Walk $walk
+     * @param string $url
      * @param  string $path
      * @return string
      */
@@ -55,6 +54,11 @@ class ScreenshotGenerator {
         return new Process($phantom.' '.$js.' '.$html.' '.$image, $cwd);
     }
 
+    /**
+     * Get the folder name for the installed system.
+     *
+     * @return string
+     */
     protected function getSystem()
     {
         $uname = strtolower(php_uname());
@@ -66,7 +70,7 @@ class ScreenshotGenerator {
         } elseif ( strpos($uname, 'linux') !== FALSE ) {
             return PHP_INT_SIZE === 4 ? 'linux-i686' : 'linux-x86_64';
         } else {
-            throw new \RuntimeException('Unknown operating system.');
+            throw new RuntimeException('Unknown operating system.');
         }
     }
 

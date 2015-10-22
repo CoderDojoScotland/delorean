@@ -2,6 +2,7 @@
 
 namespace Coderdojo\Delorean;
 
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -9,6 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Carbon\Carbon;
 use GuzzleHttp\Client as Api;
 use Exception;
+use RuntimeException;
 
 class ScreenshotCommand extends Command {
 
@@ -112,7 +114,7 @@ class ScreenshotCommand extends Command {
         }
 
         if ( filter_var($url, FILTER_VALIDATE_URL) === FALSE ) {
-            throw new \RuntimeException($url . 'is not a valid URL');
+            throw new RuntimeException($url . 'is not a valid URL');
         }
 
         return $url;

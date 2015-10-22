@@ -3,6 +3,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
+use Coderdojo\Delorean\ScreenshotCommand;
 
 if ( ! file_exists('vendor/autoload.php') ) {
 	echo "ERROR: You need to install this project with Composer. See the readme file.".PHP_EOL.PHP_EOL;
@@ -13,6 +14,6 @@ require 'vendor/autoload.php';
 
 $app = new Application('Delorean Time Machine', '1.0');
 
-$app->add(new Coderdojo\Delorean\ScreenshotCommand);
+$app->add(new ScreenshotCommand);
 
 $app->run();
