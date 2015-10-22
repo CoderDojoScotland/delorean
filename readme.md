@@ -59,17 +59,17 @@ The `src/ScreenshotGenerator.php` file contains the code that takes a screenshot
 
 Finally, this ap makes use of a number of Open-source projects. These are listed below:
 
- - [*Symfony Console*](http://symfony.com/doc/current/components/console) - Used to register a command-line app and get input from the user.
-- [*Symfony Process*](http://symfony.com/doc/current/components/process.html) - Component used to run other command line processes from our code.
- - [*PhantomJs*](http://phantomjs.org/screen-capture.html) - A 'headless' browser that we use to load up webpages and take screenshots in our code.
-- [*Guzzle*](http://guzzlephp.org/) - A great HTTP client used to 'talk' to the Wayback Machine API.
-- [*Carbon*](http://carbon.nesbot.com/) - A simple PHP DateTime helper that makes working with timestamps super easy.
+ - [**Symfony Console**](http://symfony.com/doc/current/components/console) - Used to register a command-line app and get input from the user.
+ - [**Symfony Process**](http://symfony.com/doc/current/components/process.html) - Component used to run other command line processes from our code.
+ - [**PhantomJs**](http://phantomjs.org/screen-capture.html) - A 'headless' browser that we use to load up webpages and take screenshots in our code.
+ - [**Guzzle**](http://guzzlephp.org/) - A great HTTP client used to 'talk' to the Wayback Machine API.
+ - [**Carbon**](http://carbon.nesbot.com/) - A simple PHP DateTime helper that makes working with timestamps super easy.
 
 ## TODO
 
-[] Update to check if URL exists before taking past/present screenshots
-[] Add command option to only generate past screenshot (rather than present and past)
-[] New command to take multiple past screenshots at the one time
+ - [] Update to check if URL exists before taking past/present screenshots
+ - [] Add command option to only generate past screenshot (rather than present and past)
+ - [] New command to take multiple past screenshots at the one time
 
 ## Why Delorean?
 
@@ -80,6 +80,7 @@ In the feature film series *Back to the Future*, Dr. Emmett Brown builds a time 
 - Open-source packages listed above
 - [How to Build Command-Line Apps](https://laracasts.com/series/how-to-build-command-line-apps-in-php) video series on Laracasts.com
 
-## License
+## Credits / License
 
-[View the license](http://github.com/CoderDojoScotland/delorean/blob/master/LICENSE.txt)
+Made by David Rushton, Developer at [Papertank Limited](http://papertank.co.uk)
+[Using the MIT License](http://github.com/CoderDojoScotland/delorean/blob/master/LICENSE.txt)
