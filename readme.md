@@ -16,7 +16,7 @@ mv composer.phar /usr/local/bin/composer
 Once you have Composer, you can install the app an it's depencies with
 
 ```
-composer create-project coderdojo/delorean --prefer-dist --stability=dev
+composer create-project coderdojo/delorean
 ```
 
 Alternatively, if you prefer to clone this Git repository, you can install the dependencies only with the following (inside the app root).
